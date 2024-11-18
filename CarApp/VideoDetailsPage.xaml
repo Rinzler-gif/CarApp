@@ -1,0 +1,39 @@
+﻿<Page x:Class="CarApp.VideoDetailsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CarApp"
+      xmlns:cef="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+      mc:Ignorable="d" d:DesignWidth="800"
+      Title="Деталі відео" Background="#FFF7F7F7" Height="770">
+
+    <ScrollViewer Background="White">
+        <Grid Height="761">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="11*"/>
+                <ColumnDefinition Width="772*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="0*"/>
+                <RowDefinition Height="759*"/>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Адаптивний ChromiumWebBrowser -->
+            <cef:ChromiumWebBrowser Name="VideoPlayer"
+                                    Grid.Row="1" Grid.ColumnSpan="2" Margin="6,2,0,278" Grid.RowSpan="2" >
+                <cef:ChromiumWebBrowser.Background>
+                    <ImageBrush/>
+                </cef:ChromiumWebBrowser.Background>
+            </cef:ChromiumWebBrowser>
+
+            <StackPanel Orientation="Vertical" Grid.ColumnSpan="2" Margin="11,590,0,0" Grid.Row="2" Background="White" Height="133" VerticalAlignment="Top">
+                <TextBlock Name="TitleBlock" Margin="10" FontSize="20" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Left"/>
+                <TextBlock Name="DescriptionBlock" Margin="10" FontSize="16" TextWrapping="Wrap" TextAlignment="Left"/>
+                <Button Content="Назад" Click="GoBack_Click" HorizontalAlignment="Right" Margin="10"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

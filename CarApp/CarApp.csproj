@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="photos\th-3179877378.jpg" />
+    <None Remove="th-1822649242.jpg" />
+    <None Remove="th-2629335268.jpg" />
+    <None Remove="th-2993238278.jpg" />
+    <None Remove="th-3179877378.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="cef.redist.x64" Version="120.2.7" />
+    <PackageReference Include="cef.redist.x86" Version="120.2.7" />
+    <PackageReference Include="cef.sdk" Version="127.3.5" />
+    <PackageReference Include="CefSharp.Common" Version="127.3.50" />
+    <PackageReference Include="CefSharp.Common.NETCore" Version="127.3.50" />
+    <PackageReference Include="CefSharp.H.264" Version="79.1.360.1" />
+    <PackageReference Include="CefSharp.OffScreen" Version="127.3.50" />
+    <PackageReference Include="CefSharp.OffScreen.NETCore" Version="127.3.50" />
+    <PackageReference Include="CefSharp.Wpf" Version="127.3.50" />
+    <PackageReference Include="CefSharp.Wpf.HwndHost" Version="127.3.50" />
+    <PackageReference Include="CefSharp.Wpf.NETCore" Version="127.3.50" />
+    <PackageReference Include="chromiumembeddedframework.runtime" Version="127.3.5" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="NAudio.Core" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="photos\th-3179877378.jpg" />
+    <Resource Include="photos\th-1822649242.jpg" />
+    <Resource Include="photos\th-2629335268.jpg" />
+    <Resource Include="photos\th-2993238278.jpg" />
+    <Resource Include="th-2629335268.jpg" />
+    <Resource Include="th-3179877378.jpg" />
+  </ItemGroup>
+
+</Project>
